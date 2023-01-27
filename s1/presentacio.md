@@ -277,7 +277,7 @@ class: left, middle, inverse
 
 ---
 
-# Exercici
+# Exercici 1
 
 Avaluació d'una de les demos:
 

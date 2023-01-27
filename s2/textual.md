@@ -502,7 +502,7 @@ class: left, middle, inverse
   - 30k frases de cadascuna de les 6 llengües com a *training set*
   - 10k de cadascuna com a *test set*
 
-* Utilitzeu la guia de la transparència anterior i els apunts de teoria
+* Utilitzeu la guia de la transparència anterior i els apunts de teoria i/o el [capítol 4 del llibre de Jurasky](https://web.stanford.edu/~jurafsky/slp3/4.pdf) de la bibliografia
 
 * Doneu la precisió (*accuracy*) i la matriu de confusió
 
