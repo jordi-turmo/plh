@@ -4,26 +4,23 @@
 .col1[
 ### Sessions
 
-1. [Presentació](s1/index.html)
+- [Presentació](s1/index.html)
 
-2. [Nivell textual](s2/index.html)
+- [Nivell textual](s2/index.html) (2 sessions)
 
-3. Identificació de la llengua
+- [Lèxic - morfologia](s3/index.html)
 
-4. [Lèxic - morfologia](s3/index.html)
+- [Lèxic - semàntica - *WordNet*](s4/index.html)
 
-5. [Lèxic - semàntica - *WordNet*](s4/index.html)
+- [Lèxic - semàntica - desambiguació de sentits](s5/index.html)
 
-6. [Lèxic - semàntica - *Word Embeddings*](s5/index.html)
+- [Seqüències de paraules](s6/index.html)
 
-7. [Lèxic - semàntica - *WSD*](s6/index.html)
+- [Frases - sintaxi](s7/index.html)
 
-8. [Seqüències de paraules](s7/index.html)
+- [Text - correferència](s8/index.html)
 
-9. [Frases - *Parsing*](s8/index.html)
-
-10. [Text - correferència](s9/index.html)
-
+- [Lèxic - semàntica - *Word Embeddings*](s9/index.html)
 ]
 .col2[
 
