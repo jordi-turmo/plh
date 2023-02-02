@@ -213,7 +213,7 @@ drive.mount('/content/drive')
 sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/plh')
 from textserver import TextServer
 
-ts = TextServer('loescude', 'bakx#2971', 'morpho')
+ts = TextServer('usuari', 'passwd', 'morpho')
 ctnt = ts.query("L'Arnau té un gos. Se l'estima molt.")
 
 list(map(info, sents(pars(load(ctnt))[0])))
