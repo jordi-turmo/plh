@@ -29,9 +29,9 @@ class: left, middle, inverse
 
   - Zones textuals
 
-- Pràctica 1: nivell textual
+- Pràctica: nivell textual
 
-  - Identificació de la llengua
+  - Identificació d'idioma
 
 ---
 
@@ -249,9 +249,9 @@ class: left, middle, inverse
 
   - Zones textuals
 
-- Pràctica 1: nivell textual
+- Pràctica: nivell textual
 
-  - Identificació de la llengua
+  - Identificació d'idioma
 
 ---
 
@@ -300,9 +300,9 @@ class: left, middle, inverse
 
   - Zones textuals
 
-- Pràctica 1: nivell textual
+- Pràctica: nivell textual
 
-  - Identificació de la llengua
+  - Identificació d'idioma
 
 ---
 
@@ -373,9 +373,9 @@ class: left, middle, inverse
 
   - .cyan[Zones textuals]
 
-- Pràctica 1: nivell textual
+- Pràctica: nivell textual
 
-  - Identificació de la llengua
+  - Identificació d'idioma
 
 ---
 
@@ -394,7 +394,7 @@ soup = BeautifulSoup(dt, 'html.parser')
 text = re.sub(r'\n+', r'\n', soup.get_text())
 print(text)
 ```
-
+👉
 ```
 Welcome | FreeLing Home Page
       Skip to main content
@@ -440,7 +440,7 @@ parser = xml.sax.make_parser()
 parser.setContentHandler(ChgHandler())
 parser.parse(url)
 
-ChgHandler.mn   ## Output: (0.86408, 'GBP')
+ChgHandler.mn  👉  (0.86408, 'GBP')
 ```
 
 ---
@@ -458,9 +458,9 @@ class: left, middle, inverse
 
   - .brown[Zones textuals]
 
-- .cyan[Pràctica 1: nivell textual]
+- .cyan[Pràctica: nivell textual]
 
-  - .cyan[Identificació de la llengua]
+  - .cyan[Identificació d'idioma]
 
 ---
 
@@ -486,7 +486,7 @@ class: left, middle, inverse
 
 ---
 
-# Identificació d'idioma (exercici)
+# Identificació d'idioma (pràctica 1)
 
 #### Recursos
 

@@ -58,16 +58,17 @@ class: left, middle, inverse
 
 # Avaluació
 
-- Exercicis: pes 20% 
+- Exercicis
 
-  - Training Hidden Markov Models
-  - WordNet Similarities
-  - ...
+  - Entrenar Hidden Markov Models
+  - Similaritats amb WordNet 
+  - Anàlisi sintàctica
+  - Coreferència
 
-- Pràctiques: pes 30%
+- Pràctiques
 
   - Identificació de la llengua
-  - Sentiment polarity & opinion detection
+  - Detecció opinions: models supervisat i no supervisat
   - Entrenar un model per *Name Entities*
   - Chatbot
 

@@ -24,7 +24,7 @@ class: left, middle, inverse
 
 - SentiWordNet
 
-- Exercise
+- Exercici
 
 ---
 
@@ -192,7 +192,7 @@ class: left, middle, inverse
 
 - SentiWordNet
 
-- Exercise
+- Exercici
 
 ---
 
@@ -235,7 +235,7 @@ class: left, middle, inverse
 
 - .cyan[SentiWordNet]
 
-- Exercise
+- Exercici
 
 ---
 
@@ -275,7 +275,7 @@ class: left, middle, inverse
 
 - .brown[SentiWordNet]
 
-- .cyan[Exercise]
+- .cyan[Exercici]
 
 ---
 
@@ -294,4 +294,6 @@ Donat el conjunt de paraules següent:
   - Podeu mostrar els resultats en taules
 
 3. Quina similaritat veieu més adequada per a aquest conjunt de paraules?
+
+
 

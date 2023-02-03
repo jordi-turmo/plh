@@ -31,7 +31,7 @@ class: left, middle, inverse
 
 - Pràctica
 
-  - *Sentiment Polarity* i detecció d'opinions
+  - Detecció d'opinions
 
 ---
 
@@ -236,7 +236,7 @@ class: left, middle, inverse
 
 - Pràctica
 
-  - *Sentiment Polarity* i detecció d'opinions
+  - Detecció d'opinions
 
 ---
 
@@ -386,11 +386,11 @@ class: left, middle, inverse
 
 - Pràctica
 
-  - *Sentiment Polarity* i detecció d'opinions
+  - Detecció d'opinions
 
 ---
 
-# Hidden Markov Models (exercici 2)
+# Hidden Markov Models (exercici)
 
 #### Recursos
 
@@ -423,43 +423,103 @@ class: left, middle, inverse
 
 - .cyan[Pràctica]
 
-  - .cyan[*Sentiment Polarity* i detecció d'opinions]
+  - .cyan[Detecció d'opinions]
 
 ---
 
-# Sentiment analysis data
+# NLTK’s Movie Reviews Corpus
 
-.blue[Pendent: fer-ho supervisat amb xarxes neuronals o obert]
+**Polarity corpus**: 
+- 1000 exemples positius i 1000 negatius
 
-.blue[sklearn vectorizer i Gradient Boosting]
-
-#### NLTK’s Movie Reviews Corpus
-
-* polarity corpus
-
-  - 1000 positive examples
-
-  - 1000 negative examples
-
----
-
-* use in NLTK
-
-```python3
-from nltk.corpus import movie_reviews as mr
-
-mr.fileids('pos')   # list of exemples:
-        # ['pos/cv000_29590.txt', ...]
-
-mr.words('pos/cv000_29590.txt')   # exemple as list of words:
-        # ['films', 'adapted', ...]
-```
-
-*  System requirements:
+**Requeriments**:
 
 ```python3
 import nltk
 nltk.download('movie_reviews')
+from nltk.corpus import movie_reviews as mr
 ```
+
+**Ús**:
+
+```python3
+mr.fileids('pos')[:2]
+👉  
+['pos/cv000_29590.txt',
+ 'pos/cv001_18431.txt']
+
+len(mr.fileids('neg'))
+👉  1000
+
+mr.words('pos/cv000_29590.txt')
+👉
+['films', 'adapted', 'from', 'comic', 'books', 'have', ...]
+```
+
+---
+
+# CountVectorizer de l'sklearn 
+
+Codificador *bag of words* 
+
+.cols5050[
+.col1[
+**Exemple**:
+
+- This is the first document.
+- This document is the second document.
+- And this is the third one.
+- Is this the first document?
+
+**Matriu resultant**:
+
+0 1 1 1 0 0 1 0 1 <br>
+0 2 0 1 0 1 1 0 1 <br>
+1 0 0 1 1 0 1 1 1 <br>
+0 1 1 1 0 0 1 0 1 <br>
+
+]
+.col2[
+**Diccionari**:
+
+| index | word |
+|---|---|
+| 0 | and |
+| 1 | document | 
+| 2 | first |
+| 3 | is |
+| 4 | one |
+| 5 | second |
+| 6 | the |
+| 7 | third |
+| 8 | this |
+]]
+
+.blue[Referència]: <br>
+.footnote[[https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)]
+
+---
+
+# Detecció d'opinions (pràctica 2.a)
+
+#### Recursos
+
+* Movie Reviews Corpus
+
+#### Enunciat
+
+* Implementeu un detector d'opinions positives o negatives amb alguns algoritmes d'aprenentatge supervisat de l'sklearn
+
+* Utilitzeu com a dades el Movie Reviews Corpus de l'NLTK
+
+* Dissenyeu i apliqueu un protocol de validació
+
+* Utilitzeu el preprocés que cregueu més convenient: eliminació d'*stop words*, signes de puntuació...
+
+* Utilitzeu el CountVectorizer per representar la informació
+
+* Doneu la precisions (*accuracy*) i la matrius de confusió
+
+* Analitzeu els resultats
 
 
