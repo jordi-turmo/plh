@@ -75,55 +75,54 @@ class: left, middle, inverse
 
 # UKB amb TextServer I
 
-**Requeriments**:
+### Requeriments
 
-```python3
+- Script auxiliar: [textserver.py](../codes/textserver.py)
+
+```
 from google.colab import drive
 import sys
-import json
 
 drive.mount('/content/drive')
 sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/plh')
 from textserver import TextServer
-```
-**Ús**:
-
-```python3
-ts = TextServer('usuari', 'passwd', 'senses')
-ctnt = ts.query("L'Arnau té un gos. Se l'estima molt.")
 ```
 
 ---
 
 # UKB amb TextServer II
 
-**Resultat**:
+### Ús
 
-```python3
-load = lambda r: json.loads(r.encode('utf-8'))
-pars = lambda r: [p for p in r['paragraphs']]
-sents = lambda p: [s for s in p['sentences']]
-
-info = lambda s: [(t['form'],t['lemma'],t['tag'],t['pos'],t['wn']) 
-            if 'wn' in t else (t['form'],t['lemma'],t['tag'],t['pos']) 
-            for t in s['tokens']]
 ```
+ts = TextServer('usuari', 'passwd', 'senses') 
 
-```python3
-list(map(info, sents(pars(load(ctnt))[0])))
+ts.senses("L'Arnau té un gos. Se l'estima molt.")
 👉
-[[("L'", 'el', 'DA0CS0', 'determiner'),
-  ('Arnau', 'arnau', 'NP00O00', 'noun'),
-  ('té', 'tenir', 'VMIP3S0', 'verb', '02205098-v'),
-  ('un', 'un', 'DI0MS0', 'determiner'),
-  ('gos', 'gos', 'NCMS000', 'noun', '02084071-n'),
-  ('.', '.', 'Fp', 'punctuation')],
- [('Se', 'es', 'P00CN00', 'pronoun'),
-  ("l'", 'el', 'PP3CSA0', 'pronoun'),
-  ('estima', 'estimar', 'VMIP3S0', 'verb', '02256109-v'),
-  ('molt', 'molt', 'RG', 'adverb', '00059171-r'),
-  ('.', '.', 'Fp', 'punctuation')]]
+[[["L'", 'el', 'DA0CS0', 'determiner', 'N/A'],
+  ['Arnau', 'arnau', 'NP00O00', 'noun', 'N/A'],
+  ['té', 'tenir', 'VMIP3S0', 'verb', '02205098-v'],
+  ['un', 'un', 'DI0MS0', 'determiner', 'N/A'],
+  ['gos', 'gos', 'NCMS000', 'noun', '02084071-n'],
+  ['.', '.', 'Fp', 'punctuation', 'N/A']],
+ [['Se', 'es', 'P00CN00', 'pronoun', 'N/A'],
+  ["l'", 'el', 'PP3CSA0', 'pronoun', 'N/A'],
+  ['estima', 'estimar', 'VMIP3S0', 'verb', '02256109-v'],
+  ['molt', 'molt', 'RG', 'adverb', '00059171-r'],
+  ['.', '.', 'Fp', 'punctuation', 'N/A']]]
 ```
+
+---
+
+# UKB a TextServer III
+
+### Ús amb pandas
+
+```
+ts.senses("L'Arnau té un gos. Se l'estima molt.", pandas=True)
+👉  
+```
+![:scale 50%](figures/pandas.png)
 
 ---
 class: left, middle, inverse

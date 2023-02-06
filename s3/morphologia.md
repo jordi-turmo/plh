@@ -170,54 +170,56 @@ doc = nlp("L'Arnau té un gos negre.")
 
 ---
 
-# Nivell lèxic a TextServer
+# Nivell lèxic a TextServer I
 
-### Entrada
+### Requeriments
 
-```
-"L'Arnau té un gos. Se l'estima molt."
-```
-
-### Sortida
+- Script auxiliar: [textserver.py](../codes/textserver.py)
 
 ```
-[[("L'", 'el', 'DA0CS0', 'determiner'),
-  ('Arnau', 'arnau', 'NP00O00', 'noun'),
-  ('té', 'tenir', 'VMIP3S0', 'verb'),
-  ('un', 'un', 'DI0MS0', 'determiner'),
-  ('gos', 'gos', 'NCMS000', 'noun'),
-  ('.', '.', 'Fp', 'punctuation')],
- [('Se', 'es', 'P00CN00', 'pronoun'),
-  ("l'", 'el', 'DA0CS0', 'determiner'),
-  ('estima', 'estimar', 'VMIP3S0', 'verb'),
-  ('molt', 'molt', 'RG', 'adverb'),
-  ('.', '.', 'Fp', 'punctuation')]]
-```
-
----
-
-# Ús del TextServer
-
-```python3
-load = lambda r: json.loads(r.encode('utf-8'))
-pars = lambda r: [p for p in r['paragraphs']]
-sents = lambda p: [s for s in p['sentences']]
-decode = lambda x: bytes(x,'latin1').decode('utf-8')
-info = lambda s: [(t['form'],t['lemma'],t['tag'],t['pos']) for t in s['tokens']]
-
 from google.colab import drive
 import sys
-import json
 
 drive.mount('/content/drive')
 sys.path.insert(0, '/content/drive/My Drive/Colab Notebooks/plh')
 from textserver import TextServer
-
-ts = TextServer('usuari', 'passwd', 'morpho')
-ctnt = ts.query("L'Arnau té un gos. Se l'estima molt.")
-
-list(map(info, sents(pars(load(ctnt))[0])))
 ```
+---
+
+# Nivell lèxic a TextServer II
+
+### Ús
+
+```
+ts = TextServer('usuari', 'passwd', 'morpho') 
+
+ts.morpho("L'Arnau té un gos. Se l'estima molt.")
+👉  
+[[["L'", 'el', 'DA0CS0', 'determiner'],
+  ['Arnau', 'arnau', 'NP00O00', 'noun'],
+  ['té', 'tenir', 'VMIP3S0', 'verb'],
+  ['un', 'un', 'DI0MS0', 'determiner'],
+  ['gos', 'gos', 'NCMS000', 'noun'],
+  ['.', '.', 'Fp', 'punctuation']],
+ [['Se', 'es', 'P00CN00', 'pronoun'],
+  ["l'", 'el', 'DA0CS0', 'determiner'],
+  ['estima', 'estimar', 'VMIP3S0', 'verb'],
+  ['molt', 'molt', 'RG', 'adverb'],
+  ['.', '.', 'Fp', 'punctuation']]]
+```
+
+---
+
+# Nivell lèxic a TextServer III
+
+### Ús amb pandas
+
+```
+ts.morpho("L'Arnau té un gos. Se l'estima molt.", pandas=True)
+👉  
+```
+![:scale 40%](figures/pandas.png)
+
 
 ---
 class: left, middle, inverse

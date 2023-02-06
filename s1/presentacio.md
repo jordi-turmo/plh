@@ -286,7 +286,6 @@ Avaluació d'una de les demos:
 
 2. Feu unes quantes probes amb la mateixa
 
-3. Documenteu les probes i analitzeu els resultats
+3. Analitzeu els resultats
 
-4. Feu un petit informe i lliureu-lo en format pdf al [raco](https://raco.fib.upc.edu/)
 
