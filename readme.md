@@ -18,7 +18,7 @@
 
 - [Frases - sintaxi](s7/index.html)
 
-- [Text - correferència](s8/index.html)
+- [Text - coreferència](s8/index.html)
 
 - [Lèxic - semàntica - *Word Embeddings*](s9/index.html)
 ]
