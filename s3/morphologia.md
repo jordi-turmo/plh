@@ -338,38 +338,6 @@ tagger.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])
     ('meetings', 'NNS')]
 ```
 
----
-
-# Conditional Random Fields
-
-```python3
-!pip install python-crfsuite
-from google.colab import drive
-import nltk
-
-nltk.download('treebank')
-train = nltk.corpus.treebank.tagged_sents()[:3000]
-test = nltk.corpus.treebank.tagged_sents()[3000:]
-
-drive.mount('/content/drive')
-model = nltk.tag.CRFTagger()
-model.train(train,'/content/drive/My Drive/models/crfTagger.mdl')
-
-model.accuracy(test)  👉  0.9474638463198791
-```
-
-```python3
-tagger = nltk.tag.CRFTagger()
-tagger.set_model_file('/content/drive/My Drive/models/crfTagger.mdl')
-tagger.tag(['the', 'men', 'attended', 'to', 'the', 'meetings'])
-
-👉  [('the', 'DT'),
-     ('men', 'NNS'),
-     ('attended', 'VBD'),
-     ('to', 'TO'),
-     ('the', 'DT'),
-     ('meetings', 'NNS')]
-```
 
 ---
 class: left, middle, inverse
