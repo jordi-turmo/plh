@@ -2,7 +2,7 @@ class: center, middle
 
 ## Processament del Llenguatge Humà
 
-# Lab.9: text - coreferència
+# Lab.8: text - coreferència
 
 ### Gerard Escudero
 
